@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Carnatic Academy</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f5f3f0",
+                      "on-tertiary-fixed": "#281900",
+                      "tertiary-container": "#efcd9a",
+                      "on-secondary-container": "#576670",
+                      "tertiary-fixed-dim": "#e3c290",
+                      "on-primary-container": "#70525b",
+                      "inverse-on-surface": "#f2f0ed",
+                      "outline": "#807477",
+                      "secondary-fixed": "#d5e5f0",
+                      "secondary-fixed-dim": "#b9c9d3",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#e3bdc7",
+                      "surface-bright": "#fbf9f6",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#3a4952",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#ffd9e3",
+                      "surface-variant": "#e4e2df",
+                      "on-secondary-fixed": "#0e1d25",
+                      "surface-dim": "#dbdad7",
+                      "on-tertiary-container": "#6e562d",
+                      "primary": "#745660",
+                      "on-surface-variant": "#4f4447",
+                      "on-tertiary-fixed-variant": "#59431c",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#745660",
+                      "on-primary-fixed-variant": "#5b3f48",
+                      "inverse-surface": "#30312f",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#ffdeac",
+                      "secondary": "#51606a",
+                      "on-error": "#ffffff",
+                      "on-background": "#1b1c1a",
+                      "tertiary": "#735a31",
+                      "surface-container-high": "#eae8e5",
+                      "on-surface": "#1b1c1a",
+                      "background": "#fbf9f6",
+                      "primary-fixed-dim": "#e3bdc7",
+                      "outline-variant": "#d2c3c6",
+                      "surface": "#fbf9f6",
+                      "surface-container-highest": "#e4e2df",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#efeeeb",
+                      "primary-container": "#efc8d3",
+                      "on-primary-fixed": "#2b151d",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#d5e5f0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.5rem",
+                      "lg": "1rem",
+                      "xl": "1.25rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Playfair Display"],
+                      "display": ["Playfair Display"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .swaralaya-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .swaralaya-line {
+            height: 1px;
+            background: #d2c3c6;
+            flex-grow: 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .veena-bg {
+            mask-image: linear-gradient(to bottom, transparent, black, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black, transparent);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface-dim/60 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="font-headline text-headline-sm font-bold text-primary dark:text-primary-fixed cursor-pointer active:scale-95 transition-transform">
+                Carnatic Academy
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300 font-body text-label-md" href="#">Curriculum</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300 font-body text-label-md" href="#">Performances</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300 font-body text-label-md" href="#">About Us</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">help_outline</span>
+</div>
+</nav>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex items-center justify-center pt-24 pb-12 relative overflow-hidden">
+<!-- Subtle Decorative Background -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-10 flex justify-center items-center">
+<img class="w-full h-full object-cover veena-bg" data-alt="A serene and artistic close-up of a traditional South Indian Saraswati Veena, highlighting the intricate wood carvings and the delicate glisten of the strings. The image is bathed in soft, high-key morning light, creating a minimalist and peaceful atmosphere with a warm ivory and cream color palette. The shallow depth of field emphasizes the craftsmanship and cultural heritage of Carnatic music." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpbwHEpGS-j0gdYAswmYlTfXbS4upSVcBvw7DIP1RH0iXGhp6PXdyQsTaiNM2LVrdfopCwzaozpmZirDeMw7ix7qsht2lptwvm-li0SrK6DHNEQp8jX9XdM47eBCSvjDn0a3W-aEUKnnfK1oKCB1DOf7ZtA7VJT9H2A2-EY9Q0Hvpds8jiScS85Kk94ckufw80urvbvHfqxsIg32NVmuaAZfCnWEt8pxSZ1hk7-WYBp2wjEAKCb-IYD1IJ5WmbH_ufhN7WrRYa7H0Q"/>
+</div>
+<div class="container max-w-md px-6 relative z-10">
+<div class="text-center mb-10">
+<h1 class="font-display text-3xl md:text-4xl text-on-surface mb-2">Mata Sangeetha Vidhyalaya</h1>
+<p class="text-on-surface-variant font-body">Harmony in Learning, Grace in Performance.</p>
+</div>
+<!-- Login Card -->
+<div class="glass-card bg-surface-container-lowest rounded-xl p-8 shadow-[0_30px_60px_-15px_rgba(116,86,96,0.08)]">
+<!-- Tab Toggle -->
+<div class="flex p-1 bg-surface-container rounded-full mb-8 relative">
+<button class="flex-1 py-2 text-label-md font-semibold rounded-full transition-all duration-300 z-10 text-on-primary-container bg-primary-container shadow-sm" id="studentTab">
+                        Student
+                    </button>
+<button class="flex-1 py-2 text-label-md font-medium rounded-full transition-all duration-300 z-10 text-on-surface-variant" id="adminTab">
+                        Administrator
+                    </button>
+</div>
+<!-- Form Container -->
+<div class="space-y-6" id="loginFormContainer">
+<!-- Student Login Form -->
+<form class="space-y-5 block" id="studentForm">
+<div>
+<label class="block text-label-sm text-on-surface-variant mb-2 ml-1">Student ID / Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60" placeholder="Enter your credentials" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm text-on-surface-variant mb-2 ml-1">Password</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary/20 w-4 h-4 transition-colors" type="checkbox"/>
+<span class="text-label-sm text-on-surface-variant group-hover:text-primary transition-colors">Remember Me</span>
+</label>
+<a class="text-label-sm text-primary hover:text-tertiary transition-colors" href="#">Forgot Password?</a>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-semibold text-body-md hover:bg-on-primary-fixed-variant transition-all transform active:scale-[0.98] shadow-lg shadow-primary/20 mt-4" type="submit">
+                            Sign In to Portal
+                        </button>
+</form>
+<!-- Admin Login Form (Hidden by default) -->
+<form class="space-y-5 hidden" id="adminForm">
+<div>
+<label class="block text-label-sm text-on-surface-variant mb-2 ml-1">Admin Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60" placeholder="admin@academy.com" type="email"/>
+</div>
+<div>
+<label class="block text-label-sm text-on-surface-variant mb-2 ml-1">Password</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60" placeholder="••••••••" type="password"/>
+</div>
+<div>
+<label class="block text-label-sm text-on-surface-variant mb-2 ml-1">Secure Key</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60" placeholder="Academy Access Key" type="password"/>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">verified_user</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-semibold text-body-md hover:bg-on-primary-fixed-variant transition-all transform active:scale-[0.98] shadow-lg shadow-primary/20 mt-4" type="submit">
+                            Administrator Login
+                        </button>
+</form>
+</div>
+<div class="mt-10 swaralaya-separator opacity-40">
+<div class="swaralaya-line"></div>
+<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+<div class="swaralaya-line"></div>
+</div>
+<p class="mt-8 text-center text-label-sm text-on-surface-variant">
+                    Need assistance? <a class="text-primary font-bold hover:underline" href="#">Contact Office</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-8 max-w-7xl mx-auto">
+<div class="text-on-surface-variant dark:text-outline-variant font-body text-label-sm">
+                © 2024 Carnatic Serenity Music Academy. All rights reserved.
+            </div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary transition-colors font-body text-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary transition-colors font-body text-label-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary transition-colors font-body text-label-sm" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<script>
+        const studentTab = document.getElementById('studentTab');
+        const adminTab = document.getElementById('adminTab');
+        const studentForm = document.getElementById('studentForm');
+        const adminForm = document.getElementById('adminForm');
+
+        const setActiveTab = (role) => {
+            if (role === 'student') {
+                studentTab.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+                studentTab.classList.remove('text-on-surface-variant');
+                adminTab.classList.add('text-on-surface-variant');
+                adminTab.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+                
+                studentForm.classList.remove('hidden');
+                adminForm.classList.add('hidden');
+            } else {
+                adminTab.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+                adminTab.classList.remove('text-on-surface-variant');
+                studentTab.classList.add('text-on-surface-variant');
+                studentTab.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+                
+                adminForm.classList.remove('hidden');
+                studentForm.classList.add('hidden');
+            }
+        };
+
+        studentTab.addEventListener('click', () => setActiveTab('student'));
+        adminTab.addEventListener('click', () => setActiveTab('admin'));
+
+        // Prevent default form submission for demo
+        [studentForm, adminForm].forEach(form => {
+            form.addEventListener('submit', (e) => e.preventDefault());
+        });
+    </script>
+</body></html>

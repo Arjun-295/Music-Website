@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Competitions | Swaralaya Academy</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"charcoal-text": "#5E5652", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "primary-fixed-dim": "#e3bdc7", "surface-variant": "#e4e2df", "on-primary-container": "#70525b", "cocoa-text": "#4A3B38", "outline-variant": "#d2c3c6", "on-primary-fixed-variant": "#5b3f48", "inverse-on-surface": "#f2f0ed", "on-tertiary-fixed": "#281900", "surface-container": "#efeeeb", "surface-tint": "#745660", background: "#fbf9f6", "on-tertiary-fixed-variant": "#59431c", "on-error": "#ffffff", "tertiary-container": "#efcd9a", "primary-fixed": "#ffd9e3", rosewood: "#7A5C58", "on-error-container": "#93000a", "surface-container-highest": "#e4e2df", "on-primary-fixed": "#2b151d", "inverse-surface": "#30312f", "inverse-primary": "#e3bdc7", "primary-container": "#efc8d3", "on-secondary-fixed": "#0e1d25", "on-background": "#1b1c1a", "on-tertiary-container": "#6e562d", "on-secondary": "#ffffff", outline: "#807477", "on-surface": "#1b1c1a", "on-tertiary": "#ffffff", tertiary: "#735a31", "on-secondary-fixed-variant": "#3a4952", surface: "#fbf9f6", "secondary-fixed-dim": "#b9c9d3", primary: "#745660", "on-surface-variant": "#4f4447", secondary: "#51606a", "on-primary": "#ffffff", "surface-container-high": "#eae8e5", error: "#ba1a1a", "warm-cream": "#F6F1EB", "misty-sky": "#C9DDEB", "surface-bright": "#fbf9f6", "on-secondary-container": "#576670", "secondary-fixed": "#d5e5f0", "surface-container-low": "#f5f3f0", "surface-dim": "#dbdad7", "tertiary-fixed-dim": "#e3c290", "tertiary-fixed": "#ffdeac", "blush-pink": "#F7D6D0", "secondary-container": "#d5e5f0"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {base: "8px", gutter: "24px", "margin-mobile": "20px", "section-gap-desktop": "120px", "container-max-width": "1200px", "section-gap-mobile": "64px"}, fontFamily: {"body-md": ["Inter"], "display-lg-mobile": ["Playfair Display"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Playfair Display"], "label-md": ["Inter"], "headline-md": ["Playfair Display"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "display-lg-mobile": ["40px", {lineHeight: "1.2", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "1.2", fontWeight: "600"}], "headline-sm": ["24px", {lineHeight: "1.4", fontWeight: "600"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "500"}], "headline-md": ["32px", {lineHeight: "1.3", fontWeight: "600"}], "display-lg": ["56px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}]}}}};</script>
+<style>
+        body {
+            background-color: #fbf9f6;
+            color: #1b1c1a;
+            overflow-x: hidden;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .slide-up {
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .swaralaya-separator {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .swaralaya-separator div {
+            height: 1px;
+            background: #7A5C58;
+            opacity: 0.3;
+        }
+        .swaralaya-separator div:nth-child(1) { width: 80px; }
+        .swaralaya-separator div:nth-child(2) { width: 40px; }
+        .swaralaya-separator div:nth-child(3) { width: 60px; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F1EB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #745660;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md dark:bg-surface-dim/60 shadow-sm dark:shadow-none transition-all duration-300 ease-in-out">
+<div class="max-w-container-max-width mx-auto flex justify-between items-center px-gutter py-4">
+<a class="font-display-lg text-headline-md text-cocoa-text dark:text-inverse-on-surface font-bold tracking-tight" href="#">Mata Sangeeta Vidyalaya</a>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Competitions</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Workshops</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Activities</a>
+<button class="ml-4 px-6 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md hover:opacity-90 transition-all duration-300">Join Now</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="max-w-container-max-width mx-auto px-gutter py-16 md:py-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<!-- Left: Image -->
+<div class="relative fade-in">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-blush-pink rounded-full opacity-30 blur-2xl"></div>
+<div class="rounded-[20px] overflow-hidden shadow-lg border border-outline-variant/30">
+<img alt="Young musicians performing" class="w-full h-[500px] object-cover" data-alt="A cinematic, high-quality photograph of two Carnatic music artists in traditional silk attire playing the Veena and Violin on a wooden stage. The lighting is warm and soft, reminiscent of a prestigious morning concert hall in Chennai. The background is a gentle blur of golden light, emphasizing the serene expressions and artisanal craftsmanship of the instruments. The aesthetic is clean, light-mode, and culturally authentic with ivory and rosewood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcQxg0qtwPQkOA1g2vTSVN_SdjZhRvF7_IglGFJ554aaJfNAI_Fba4JcQ6hHFhinU1O3lL-rzzzI1fu9aiAgVdOhOd6pc5zMdgBci4mH4GTuQ15i0jgyW_N_whoWSaU1jqjt1plTu12T16hkNpApCgmWQ2Weyh0-ESCect7VCCYNLl2zYj6W8VvjBpuZhPfRFqKxCA-WhYJK4w4Uf1hFqMwh8LWkzdo8MJyQY5x7p1urZufQr7yI15Pcfo6uAXxr9H7GFR0vOxs8QI">
+</div>
+</div>
+<!-- Right: Content -->
+<div class="slide-up" style="visibility: visible;">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm mb-6">Featured Competition</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-cocoa-text mb-6">Young Carnatic Maestro Competition 2026</h1>
+<p class="font-body-lg text-body-lg text-charcoal-text mb-8">An inspiring platform for aspiring musicians to showcase their knowledge of Carnatic music, rhythmic precision, and raga improvisation before a panel of legendary masters.</p>
+<div class="grid grid-cols-2 gap-6 mb-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<div>
+<p class="font-label-md text-label-md text-cocoa-text">Date</p>
+<p class="text-charcoal-text">Aug 15, 2026</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-md text-label-md text-cocoa-text">Venue</p>
+<p class="text-charcoal-text">Swaralaya Sabha Hall</p>
+</div>
+</div>
+<div class="flex items-start gap-3 col-span-2">
+<span class="material-symbols-outlined text-primary">category</span>
+<div>
+<p class="font-label-md text-label-md text-cocoa-text">Categories</p>
+<p class="text-charcoal-text">Vocal, Veena, Violin, Mridangam</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-[20px] font-label-md text-label-md hover:shadow-lg transition-all duration-300">Enroll Now</button>
+<button class="px-8 py-4 border border-outline text-primary rounded-[20px] font-label-md text-label-md hover:bg-surface-container-low transition-all duration-300">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Filter Floating Section -->
+<section class="max-w-container-max-width mx-auto px-gutter -mt-12 relative z-10">
+<div class="bg-surface-container-lowest glass border border-white/40 shadow-sm rounded-[20px] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+<div class="relative w-full md:flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-warm-cream/50 border-none border-b border-rosewood/20 focus:border-b-2 focus:border-primary focus:ring-0 rounded-t-lg transition-all outline-none text-cocoa-text placeholder:text-outline-variant" placeholder="Search competitions, instruments, categories..." type="text">
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 py-2 rounded-full bg-blush-pink text-primary font-label-md text-label-md">All</button>
+<button class="px-5 py-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-md text-label-md">Live</button>
+<button class="px-5 py-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-md text-label-md">Upcoming</button>
+<button class="px-5 py-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-md text-label-md">Closed</button>
+</div>
+</div>
+</section>
+<!-- Competition Grid Section -->
+<section class="max-w-container-max-width mx-auto px-gutter py-24">
+<div class="flex flex-col items-center mb-16">
+<h2 class="font-headline-md text-headline-md text-cocoa-text text-center">Upcoming Competi<div>tions<div><br></div></div></h2>
+<div class="swaralaya-separator">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up" style="animation-delay: 0.1s; visibility: visible;">
+<div class="p-6 bg-surface-container-lowest rounded-[19px] h-full flex flex-col">
+<div class="relative mb-6 rounded-xl overflow-hidden aspect-[4/3]">
+<img alt="Singer performing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A professional close-up of a Carnatic vocalist singing into a vintage-style microphone. The lighting is ethereal with a soft pinkish-gold bloom. The artist wears traditional jewelry and a silk sari, embodying artistic dedication. The composition is clean, airy, and fits a minimalist fine arts aesthetic with warm ivory backgrounds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCiPRW-5ciKbx6JWrpRxnIOGuXzOOIcJ7fY403nIQ7DuRSZfMR-Jx8X0cv5tnn3U9SbAgGIyrgwbN-EC9rseF5MYEJDhBNNZxIn2WGLMD2Gq-RVLNJQV4hwEz7R_z-BrnMHUG0vEsNKMGNI_G_8jxCASHOwY16Ry11Hg9k0E_kK6ujfdoai1Zgch6hpdtVRnvQhNHaP7AV7RFmyikqFJuJnUddsILdB258tgn3ZkFh_LKRS3FGfvy1NfhOg0J4Eyv8vx8b4tv14Yjc">
+<span class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Live</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-cocoa-text mb-3">Carnatic Vocal Excellence Contest</h3>
+<p class="text-charcoal-text font-body-md mb-6 flex-grow">A senior-level competition focusing on 'Manodharma' and complex 'Ragam-Tanam-Pallavi' renditions.</p>
+<div class="pt-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-primary font-label-md text-label-md">June 20 - 22</span>
+<button class="text-primary font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up" style="animation-delay: 0.2s; visibility: visible;">
+<div class="p-6 bg-surface-container-lowest rounded-[19px] h-full flex flex-col">
+<div class="relative mb-6 rounded-xl overflow-hidden aspect-[4/3]">
+<img alt="Veena details" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An artistic, macro-focused photograph of a South Indian Saraswati Veena, highlighting the intricate wood carvings and the shimmering brass strings. The background is a soft, sunlit room with dust motes dancing in the light. The color palette is composed of deep rosewood browns and warm creams, creating a timeless and serene atmosphere suitable for a premium music academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALxXFc7ZGovZ14J7qwOwA8LyCRozM3car2CiKCIiKzu9_r-qVZvnLTGICgU0lq37TB2CkSFaupEMUF1Jgm7eP39-XUVfEfAwjlTO2Gm6F3nD_Jry20zIJUzjYQgdaAmCVJOCJtkiw7IVOiq9pp3SIXAx0lKtLIt-KTJl6KnZbkMWPg_THzYwWDkGyQK3gpIeEGEaj0sUJAeLevs9y7Cw6kVLWKRdUt9GjbsLM7tElEy03TslC_RobDXL_xzd0AL1qGx5ehMn_CdRfV">
+<span class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Upcoming</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-cocoa-text mb-3">Veena Recital Competition</h3>
+<p class="text-charcoal-text font-body-md mb-6 flex-grow">Celebrating the celestial sound of the Veena. Open to students from all over India in three age groups.</p>
+<div class="pt-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-primary font-label-md text-label-md">Sept 10</span>
+<button class="text-primary font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up" style="animation-delay: 0.3s; visibility: visible;">
+<div class="p-6 bg-surface-container-lowest rounded-[19px] h-full flex flex-col opacity-80">
+<div class="relative mb-6 rounded-xl overflow-hidden aspect-[4/3] grayscale">
+<img alt="Violin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist photograph of a violin resting on a silk cloth, captured in a monochromatic sepia tone that emphasizes the classical nature of the instrument. Soft shadows fall across the bridge and scroll. The mood is nostalgic and respectful of tradition, set against a pristine ivory background with no clutter. High-end editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9yXhKD76Iey8wIXuZ8-8h02GYeGYbflP-SrOvSXjmZS07zFrclTIVAvuB3E2MX7QJUCRP4Kp6mfkO9xzi-4EQDJ8reEQOGx3iZJGRWqXfIFjLi_fiWnUcnGbvxuRkVeM46XS16-06rSG9OwyTuQHX7cUS845mr_E714hZdtrZZu2CSmktWMpn1_2nFQbNeZ_pNTbas4Dj36IzkPISWgqCJ7RJO_2ro-pmIooz19Cxb28_V5vyWKwLEjAQZJkH223t0REX6pEQaPDq">
+<span class="absolute top-4 right-4 bg-surface-variant text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Closed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-cocoa-text mb-3">Junior Violin Festival</h3>
+<p class="text-charcoal-text font-body-md mb-6 flex-grow">A platform for young violinists to display their dexterity and understanding of Carnatic gamakas.</p>
+<div class="pt-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-outline font-label-md text-label-md">Completed</span>
+<button class="text-outline font-bold flex items-center gap-1 cursor-not-allowed">
+                                Results <span class="material-symbols-outlined text-sm">lock</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Separator -->
+<div class="flex justify-center py-12 opacity-40">
+<svg fill="none" height="40" viewBox="0 0 200 40" width="200" xmlns="http://www.w3.org/2000/svg">
+<path d="M100 0C104 10 115 15 125 15C135 15 146 10 150 0M50 0C54 10 65 15 75 15C85 15 96 10 100 0" stroke="#745660" stroke-width="1"></path>
+<circle cx="100" cy="25" fill="#745660" r="3"></circle>
+<path d="M0 25H90M110 25H200" stroke="#745660" stroke-dasharray="4 4" stroke-width="0.5"></path>
+</svg>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-warm-cream dark:bg-surface-container-low border-t border-outline-variant dark:border-outline">
+<div class="max-w-container-max-width mx-auto px-gutter py-section-gap-mobile md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<a class="font-display-lg text-headline-sm text-primary font-bold mb-4 inline-block" href="#">Mata Sangeetha Vidhyalaya</a>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">Preserving the timeless traditions of South Indian classical music through structured education and performance opportunities.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span class="material-symbols-outlined text-sm">music_note</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-cocoa-text font-bold mb-6">Quick Links</h4>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-cocoa-text font-bold mb-6">Contact Us</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">12/4, Venkatesa Street,</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Mylapore, Chennai - 600004</p>
+<p class="font-body-md text-body-md text-primary font-bold">+91 44 2461 0000</p>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto px-gutter py-6 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant/60">© 2024 Mata Sangeetha Vidhyalaya. Mylapore, Chennai.</p>
+</div>
+</footer>
+<script>
+        // Simple entrance observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.visibility = 'visible';
+                    if (entry.target.classList.contains('slide-up')) {
+                        entry.target.classList.add('slide-up');
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.slide-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-4', 'shadow-sm');
+            } else {
+                nav.classList.add('py-4', 'shadow-sm');
+                nav.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+
+
+</body></html>
