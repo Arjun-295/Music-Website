@@ -194,38 +194,7 @@ const SwaralayaCompetitions = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-warm-cream border-t border-outline-variant">
-        <div className="max-w-container-max mx-auto px-gutter py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <Link className="font-display text-2xl text-primary font-bold mb-4 inline-block" to="/">Mata Sangeetha Vidhyalaya</Link>
-            <p className="font-body text-base text-on-surface-variant max-w-sm mb-6">Preserving the timeless traditions of South Indian classical music through structured education and performance opportunities.</p>
-            <div className="flex gap-4">
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span className="material-symbols-outlined text-sm">share</span></a>
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span className="material-symbols-outlined text-sm">music_note</span></a>
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span className="material-symbols-outlined text-sm">mail</span></a>
-            </div>
           </div>
-          <div>
-            <h4 className="font-label text-sm text-cocoa-text font-bold mb-6 uppercase tracking-wider">Quick Links</h4>
-            <ul className="flex flex-col gap-4">
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">About Us</Link></li>
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Contact</Link></li>
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Privacy Policy</Link></li>
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Terms of Service</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label text-sm text-cocoa-text font-bold mb-6 uppercase tracking-wider">Contact Us</h4>
-            <p className="font-body text-sm text-on-surface-variant mb-2">12/4, Venkatesa Street,</p>
-            <p className="font-body text-sm text-on-surface-variant mb-4">Mylapore, Chennai - 600004</p>
-            <p className="font-body text-sm text-primary font-bold">+91 44 2461 0000</p>
-          </div>
-        </div>
-        <div className="max-w-container-max mx-auto px-gutter py-6 border-t border-outline-variant/30 text-center">
-          <p className="font-body text-xs text-on-surface-variant/60">© 2024 Mata Sangeetha Vidhyalaya. Mylapore, Chennai.</p>
-        </div>
-      </footer>
-    </div>
   );
 };
 

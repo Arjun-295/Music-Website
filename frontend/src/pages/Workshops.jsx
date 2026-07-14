@@ -131,7 +131,7 @@ const Workshops = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up-trigger" style={{ animationDelay: '0s' }}>
+            <Link to="/workshop-details" className="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up-trigger block" style={{ animationDelay: '0s' }}>
               <div className="p-6 bg-surface-container-lowest rounded-[19px] h-full flex flex-col">
                 <div className="relative mb-6 rounded-xl overflow-hidden aspect-[4/3]">
                   <img alt="T.M. Krishna Portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCiPRW-5ciKbx6JWrpRxnIOGuXzOOIcJ7fY403nIQ7DuRSZfMR-Jx8X0cv5tnn3U9SbAgGIyrgwbN-EC9rseF5MYEJDhBNNZxIn2WGLMD2Gq-RVLNJQV4hwEz7R_z-BrnMHUG0vEsNKMGNI_G_8jxCASHOwY16Ry11Hg9k0E_kK6ujfdoai1Zgch6hpdtVRnvQhNHaP7AV7RFmyikqFJuJnUddsILdB258tgn3ZkFh_LKRS3FGfvy1NfhOg0J4Eyv8vx8b4tv14Yjc" />
@@ -149,10 +149,10 @@ const Workshops = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2 */}
-            <div className="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up-trigger" style={{ animationDelay: '0.1s' }}>
+            <Link to="/workshop-details" className="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up-trigger block" style={{ animationDelay: '0.1s' }}>
               <div className="p-6 bg-surface-container-lowest rounded-[19px] h-full flex flex-col">
                 <div className="relative mb-6 rounded-xl overflow-hidden aspect-[4/3]">
                   <img alt="Carnatic Vocal Class" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALxXFc7ZGovZ14J7qwOwA8LyCRozM3car2CiKCIiKzu9_r-qVZvnLTGICgU0lq37TB2CkSFaupEMUF1Jgm7eP39-XUVfEfAwjlTO2Gm6F3nD_Jry20zIJUzjYQgdaAmCVJOCJtkiw7IVOiq9pp3SIXAx0lKtLIt-KTJl6KnZbkMWPg_THzYwWDkGyQK3gpIeEGEaj0sUJAeLevs9y7Cw6kVLWKRdUt9GjbsLM7tElEy03TslC_RobDXL_xzd0AL1qGx5ehMn_CdRfV" />
@@ -170,10 +170,10 @@ const Workshops = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3 */}
-            <div className="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up-trigger" style={{ animationDelay: '0.2s' }}>
+            <Link to="/workshop-details" className="bg-warm-cream rounded-[20px] p-1 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all duration-500 group slide-up-trigger block" style={{ animationDelay: '0.2s' }}>
               <div className="p-6 bg-surface-container-lowest rounded-[19px] h-full flex flex-col">
                 <div className="relative mb-6 rounded-xl overflow-hidden aspect-[4/3]">
                   <img alt="Veena Workshop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9yXhKD76Iey8wIXuZ8-8h02GYeGYbflP-SrOvSXjmZS07zFrclTIVAvuB3E2MX7QJUCRP4Kp6mfkO9xzi-4EQDJ8reEQOGx3iZJGRWqXfIFjLi_fiWnUcnGbvxuRkVeM46XS16-06rSG9OwyTuQHX7cUS845mr_E714hZdtrZZu2CSmktWMpn1_2nFQbNeZ_pNTbas4Dj36IzkPISWgqCJ7RJO_2ro-pmIooz19Cxb28_V5vyWKwLEjAQZJkH223t0REX6pEQaPDq" />
@@ -191,7 +191,7 @@ const Workshops = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -206,38 +206,7 @@ const Workshops = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-warm-cream border-t border-outline-variant">
-        <div className="max-w-container-max mx-auto px-gutter py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <Link className="font-display text-2xl text-primary font-bold mb-4 inline-block" to="/">Mata Sangeetha Vidhyalaya</Link>
-            <p className="font-body text-base text-on-surface-variant max-w-sm mb-6">Preserving the timeless traditions of South Indian classical music through structured education and performance opportunities.</p>
-            <div className="flex gap-4">
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span className="material-symbols-outlined text-sm">share</span></a>
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span className="material-symbols-outlined text-sm">music_note</span></a>
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span className="material-symbols-outlined text-sm">mail</span></a>
-            </div>
           </div>
-          <div>
-            <h4 className="font-label text-sm text-cocoa-text font-bold mb-6 uppercase tracking-wider">Quick Links</h4>
-            <ul className="flex flex-col gap-4">
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">About Us</Link></li>
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/workshops">Workshops</Link></li>
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Contact</Link></li>
-              <li><Link className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Privacy Policy</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-label text-sm text-cocoa-text font-bold mb-6 uppercase tracking-wider">Contact Us</h4>
-            <p className="font-body text-sm text-on-surface-variant mb-2">12/4, Venkatesa Street,</p>
-            <p className="font-body text-sm text-on-surface-variant mb-4">Mylapore, Chennai - 600004</p>
-            <p className="font-body text-sm text-primary font-bold">+91 44 2461 0000</p>
-          </div>
-        </div>
-        <div className="max-w-container-max mx-auto px-gutter py-6 border-t border-outline-variant/30 text-center">
-          <p className="font-body text-xs text-on-surface-variant/60">© 2024 Mata Sangeetha Vidhyalaya. Mylapore, Chennai.</p>
-        </div>
-      </footer>
-    </div>
   );
 };
 

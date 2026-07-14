@@ -19,10 +19,7 @@ const Activities = () => {
         </div>
       </main>
 
-      <footer className="w-full rounded-t-xl bg-surface-container border-t border-outline-variant/50 mt-auto py-8 text-center text-on-surface-variant text-sm">
-        © 2024 Mata Sangeetha Vidhyalaya. All rights reserved.
-      </footer>
-    </div>
+          </div>
   );
 };
 

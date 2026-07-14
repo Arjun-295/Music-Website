@@ -1,12 +1,13 @@
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const fileInputRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Redirecting to payment gateway...');
+    navigate('/checkout');
   };
 
   const handleUploadClick = () => {
@@ -195,39 +196,7 @@ const Registration = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-surface-container-low border-t border-outline-variant/30 w-full pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 max-w-[1200px] mx-auto text-center md:text-left">
-          <div>
-            <h4 className="font-headline text-xl text-cocoa-brown font-bold mb-6">Mata Sangeetha Vidhyalaya</h4>
-            <p className="font-body text-sm text-on-surface-variant leading-relaxed">Dedicated to nurturing the timeless traditions of Carnatic music while embracing the future of art education.</p>
           </div>
-          <div className="flex flex-col gap-3">
-            <h5 className="text-cocoa-brown font-bold mb-3 uppercase text-xs tracking-widest">Quick Links</h5>
-            <a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">About Us</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Gallery</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Contact Us</a>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h5 className="text-cocoa-brown font-bold mb-3 uppercase text-xs tracking-widest">Stay Connected</h5>
-            <div className="flex justify-center md:justify-start gap-4">
-              <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
-                <span className="material-symbols-outlined text-primary text-xl">language</span>
-              </a>
-              <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
-                <span className="material-symbols-outlined text-primary text-xl">alternate_email</span>
-              </a>
-              <a className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
-                <span className="material-symbols-outlined text-primary text-xl">call</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-[1200px] mx-auto px-6 mt-16 pt-8 border-t border-outline-variant/20 text-center">
-          <p className="font-body text-xs text-on-surface-variant opacity-70">© 2024 Mata Sangeetha Vidhyalaya. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
   );
 };
 

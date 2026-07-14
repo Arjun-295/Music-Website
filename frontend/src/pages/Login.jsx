@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [activeTab, setActiveTab] = useState('student');
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    navigate('/');
+  };
 
   return (
     <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
@@ -37,7 +43,7 @@ const Login = () => {
             </div>
 
             <div className="space-y-6">
-              <form className={`space-y-5 ${activeTab === 'student' ? 'block' : 'hidden'}`} onSubmit={(e) => e.preventDefault()}>
+              <form className={`space-y-5 ${activeTab === 'student' ? 'block' : 'hidden'}`} onSubmit={handleLogin}>
                 <div>
                   <label className="block text-label-sm text-on-surface-variant mb-2 ml-1">Student ID / Email</label>
                   <input className="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60 outline-none" placeholder="Enter your credentials" type="text"/>
@@ -58,7 +64,7 @@ const Login = () => {
                 </button>
               </form>
 
-              <form className={`space-y-5 ${activeTab === 'admin' ? 'block' : 'hidden'}`} onSubmit={(e) => e.preventDefault()}>
+              <form className={`space-y-5 ${activeTab === 'admin' ? 'block' : 'hidden'}`} onSubmit={handleLogin}>
                 <div>
                   <label className="block text-label-sm text-on-surface-variant mb-2 ml-1">Admin Email</label>
                   <input className="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all duration-300 py-3 px-1 text-body-md placeholder:text-outline-variant/60 outline-none" placeholder="admin@academy.com" type="email"/>
@@ -92,19 +98,7 @@ const Login = () => {
         </div>
       </main>
 
-      <footer className="w-full py-8 bg-surface-container-low dark:bg-surface-container-lowest border-t border-outline-variant/30 mt-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 px-8 max-w-7xl mx-auto">
-          <div className="text-on-surface-variant dark:text-outline-variant font-body text-label-sm">
-            © 2024 Carnatic Serenity Music Academy. All rights reserved.
           </div>
-          <div className="flex gap-6">
-            <a className="text-on-surface-variant dark:text-outline-variant hover:text-tertiary transition-colors font-body text-label-sm" href="#">Privacy Policy</a>
-            <a className="text-on-surface-variant dark:text-outline-variant hover:text-tertiary transition-colors font-body text-label-sm" href="#">Terms of Service</a>
-            <a className="text-on-surface-variant dark:text-outline-variant hover:text-tertiary transition-colors font-body text-label-sm" href="#">Contact Support</a>
-          </div>
-        </div>
-      </footer>
-    </div>
   );
 };
 

@@ -6,11 +6,14 @@ import Registration from './pages/Registration';
 import RegistrationSuccess from './pages/RegistrationSuccess';
 import Workshops from './pages/Workshops';
 import CompetitionDetails from './pages/CompetitionDetails';
+import WorkshopDetails from './pages/WorkshopDetails';
 import SecureCheckout from './pages/SecureCheckout';
 import SwaralayaCompetitions from './pages/SwaralayaCompetitions';
-import Activities from './pages/Activities';
+import Gallery from './pages/Gallery';
+import AboutUs from './pages/AboutUs';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,10 +27,13 @@ function App() {
         <Route path="/registration-success" element={<RegistrationSuccess />} />
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/competition-details" element={<CompetitionDetails />} />
+        <Route path="/workshop-details" element={<WorkshopDetails />} />
         <Route path="/checkout" element={<SecureCheckout />} />
         <Route path="/swaralaya-competitions" element={<SwaralayaCompetitions />} />
-        <Route path="/activities" element={<Activities />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

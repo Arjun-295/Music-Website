@@ -44,7 +44,7 @@ const Competitions = () => {
         {/* Competition Cards List */}
         <div className="flex flex-col gap-6">
           {/* Competition Card 1: Live */}
-          <div className="bg-warm-cream rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-start gap-6 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all">
+          <Link to="/competition-details" className="bg-warm-cream rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-start gap-6 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all group block">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
                 <span className="px-3 py-1 rounded-full bg-primary text-on-primary text-[10px] font-bold tracking-wider uppercase">Live</span>
@@ -83,7 +83,7 @@ const Competitions = () => {
             <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden flex-shrink-0">
               <img alt="Vocal Contest" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0E22O1lV3Zi_AFC89QiFNZpJECugfXATmFeBd9W0vrN50fuBujYr7va-BfPP1T1Hspi-QmgVrkqmofpKBOqNQumBF77xd2UYiw-Mi0tST_NxGPWy02qIp2e0vcfEjYZbQSR1BrLiJkcKO23MmDVTXu8EaF99f8zb1cNNE7OI_sUwb3yOjmOpSiSxYLe3RIV7hWZOpPWCIclQx5hfkfko4X35UsoEvTJyECBn6wbmzkTtxpmR_oKIkvKeuLpw1AslF_z1AmQqEodWq" />
             </div>
-          </div>
+          </Link>
 
           {/* Competition Card 2: Upcoming */}
           <div className="bg-warm-cream rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-start gap-6 border border-outline-variant/30 shadow-sm hover:shadow-md transition-all">
@@ -180,57 +180,7 @@ const Competitions = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-warm-cream border-t border-outline-variant mt-20">
-        <div className="max-w-[1200px] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1">
-            <div className="font-display text-2xl font-bold text-primary mb-6">Mata Sangeetha Vidhyalaya</div>
-            <p className="text-on-surface-variant text-sm leading-relaxed mb-6">Preserving and teaching the timeless art of Carnatic music through modern pedagogy and traditional wisdom.</p>
-            <div className="flex gap-4">
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-all" href="#">
-                <span className="material-symbols-outlined text-sm">public</span>
-              </a>
-              <a className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-all" href="#">
-                <span className="material-symbols-outlined text-sm">mail</span>
-              </a>
-            </div>
           </div>
-          <div>
-            <h4 className="font-bold text-cocoa-text mb-6">Quick Links</h4>
-            <ul className="space-y-4">
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">About Us</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Our Faculty</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Admissions</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-cocoa-text mb-6">Community</h4>
-            <ul className="space-y-4">
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Competitions</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Events</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Student Portal</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Alumni</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-cocoa-text mb-6">Support</h4>
-            <ul className="space-y-4">
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Contact</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Terms of Service</a></li>
-              <li><a className="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Help Center</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-[1200px] mx-auto px-6 py-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant">
-          <p>© 2024 Mata Sangeetha Vidhyalaya Carnatic Music Academy. Mylapore, Chennai.</p>
-          <div className="flex gap-8">
-            <span>Designed for Harmony</span>
-            <span>Crafted for Tradition</span>
-          </div>
-        </div>
-      </footer>
-    </div>
   );
 };
 

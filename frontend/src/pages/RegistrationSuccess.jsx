@@ -89,38 +89,7 @@ const RegistrationSuccess = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full rounded-t-xl bg-surface-container border-t border-outline-variant/50 mt-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 py-16 max-w-[1200px] mx-auto">
-          <div className="space-y-4">
-            <span className="font-display text-xl font-semibold text-primary">Mata Sangeetha Vidhyalaya</span>
-            <p className="font-body text-body-md text-on-surface-variant leading-relaxed">
-              Preserving the sanctity of Carnatic traditions through modern educational excellence. Join our community of lifelong learners.
-            </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="flex flex-col gap-3">
-              <Link className="font-body text-body-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform duration-200" to="/">About Us</Link>
-              <Link className="font-body text-body-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform duration-200" to="/">Faculty</Link>
-              <Link className="font-body text-body-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform duration-200" to="/">Gallery</Link>
-            </div>
-            <div className="flex flex-col gap-3">
-              <Link className="font-body text-body-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform duration-200" to="/">Privacy Policy</Link>
-              <Link className="font-body text-body-md text-on-surface-variant hover:text-primary hover:translate-x-1 transition-transform duration-200" to="/">Contact</Link>
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <div className="flex gap-4">
-              <span className="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">music_note</span>
-              <span className="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
-              <span className="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
-            </div>
-            <p className="font-body text-label-sm text-on-surface-variant opacity-70">
-              © 2024 Mata Sangeetha Vidhyalaya. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
   );
 };
 
