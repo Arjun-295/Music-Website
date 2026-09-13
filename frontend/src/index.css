@@ -208,3 +208,13 @@
     color: #745660;
     font-size: 12px;
 }
+.glass-header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.swaralaya-dot {
+    width: 6px;
+    height: 6px;
+    background: #745660;
+    border-radius: 50%;
+}

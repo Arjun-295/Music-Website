@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Competitions from './pages/Competitions';
@@ -11,14 +11,18 @@ import SecureCheckout from './pages/SecureCheckout';
 import SwaralayaCompetitions from './pages/SwaralayaCompetitions';
 import Gallery from './pages/Gallery';
 import AboutUs from './pages/AboutUs';
+import AdminCompetition from './pages/AdminCompetition';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith('/admin');
+
   return (
-    <Router>
-      <Header />
+    <>
+      {!isAdmin && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -32,10 +36,21 @@ function App() {
         <Route path="/swaralaya-competitions" element={<SwaralayaCompetitions />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/admin" element={<AdminCompetition />} />
+        <Route path="/admin/create-competition" element={<AdminCompetition />} />
       </Routes>
-      <Footer />
+      {!isAdmin && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
 
 export default App;
+
