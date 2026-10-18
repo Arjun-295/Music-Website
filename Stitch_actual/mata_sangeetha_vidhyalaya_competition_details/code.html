@@ -1,0 +1,354 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Classroom Series with T.M. Krishna - Mata Sangeeta Vidyalaya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#fbf9f6",
+                        "surface-tint": "#745660",
+                        "inverse-on-surface": "#f2f0ed",
+                        "secondary": "#51606a",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#281900",
+                        "on-secondary-container": "#576670",
+                        "on-primary-fixed": "#2b151d",
+                        "surface-container-high": "#eae8e5",
+                        "surface-variant": "#e4e2df",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e3c290",
+                        "surface-bright": "#fbf9f6",
+                        "on-tertiary-container": "#6e562d",
+                        "surface-container-low": "#f5f3f0",
+                        "on-secondary-fixed": "#0e1d25",
+                        "surface-dim": "#dbdad7",
+                        "primary-container": "#efc8d3",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#735a31",
+                        "on-primary-fixed-variant": "#5b3f48",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdeac",
+                        "on-secondary-fixed-variant": "#3a4952",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#59431c",
+                        "surface": "#fbf9f6",
+                        "on-error": "#ffffff",
+                        "on-background": "#1b1c1a",
+                        "on-surface": "#1b1c1a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#e3bdc7",
+                        "tertiary-container": "#efcd9a",
+                        "on-primary-container": "#70525b",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#b9c9d3",
+                        "primary": "#745660",
+                        "on-surface-variant": "#4f4447",
+                        "outline-variant": "#d2c3c6",
+                        "surface-container-highest": "#e4e2df",
+                        "outline": "#807477",
+                        "inverse-surface": "#30312f",
+                        "secondary-fixed": "#d5e5f0",
+                        "inverse-primary": "#e3bdc7",
+                        "secondary-container": "#d5e5f0",
+                        "surface-container": "#efeeeb",
+                        "primary-fixed": "#ffd9e3",
+                        "blush-pink": "#F7D6D0",
+                        "misty-sky": "#C9DDEB",
+                        "warm-cream": "#F6F1EB",
+                        "rosewood": "#7A5C58",
+                        "cocoa-text": "#4A3B38",
+                        "charcoal-text": "#5E5652"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Playfair Display", "serif"],
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    spacing: {
+                        'margin-desktop': '80px',
+                        'container-max': '1200px',
+                        'section-gap': '120px',
+                        'gutter': '24px'
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .swaralaya-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 48px 0;
+        }
+        .swaralaya-line {
+            height: 1px;
+            background: #D4B483;
+            flex-grow: 1;
+        }
+        .swaralaya-dot {
+            width: 8px;
+            height: 8px;
+            background: #D4B483;
+            transform: rotate(45deg);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 glass-nav shadow-sm">
+<nav class="flex justify-between items-center px-6 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display text-2xl md:text-3xl text-on-secondary-fixed-variant tracking-tighter font-bold">
+                Mata Sangeeta Vidyalaya
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label text-sm uppercase tracking-widest" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-label text-sm uppercase tracking-widest" href="#">Competitions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label text-sm uppercase tracking-widest" href="#">Workshops</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label text-sm uppercase tracking-widest" href="#">Activities</a>
+<button class="bg-primary text-on-primary px-8 py-2.5 rounded-full hover:scale-105 transition-all duration-300 font-label text-sm font-semibold active:scale-95">
+                    Join Now
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[450px] flex items-end overflow-hidden bg-[#241a15]" data-alt="A cinematic wide shot of a master Carnatic musician, T.M. Krishna, rendered in a soulful black and white portrait overlaid on a deep, rich dark wood texture. The lighting is dramatic and warm, evoking the atmosphere of a traditional South Indian concert hall. The scene is elegant and minimalist, with the title 'Classroom Series' appearing in sophisticated gold typography against the organic grain of the rosewood background.">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<div class="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/dark-wood.png')]"></div>
+</div>
+<div class="max-w-container-max mx-auto w-full px-6 md:px-margin-desktop pb-16 relative z-10">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+<div class="max-w-2xl">
+<span class="text-tertiary-fixed font-label text-sm uppercase tracking-[0.2em] mb-4 block">Musical Mastery</span>
+<h1 class="font-display text-4xl md:text-6xl text-white leading-tight mb-6">Classroom Series with T.M. Krishna</h1>
+<div class="h-1 w-24 bg-tertiary-fixed rounded-full"></div>
+</div>
+<div class="bg-surface/10 glass-nav border border-white/10 p-6 rounded-xl text-white">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-tertiary-fixed">event</span>
+<p class="font-label text-lg">June 20 &amp; 21, 2026</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">schedule</span>
+<p class="font-label text-lg">8:00 to 10:00 PM IST</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Section -->
+<section class="bg-surface py-section-gap-mobile md:py-24">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Content -->
+<div class="lg:col-span-8">
+<div class="prose prose-lg max-w-none">
+<p class="font-body text-body-lg text-cocoa-text leading-relaxed mb-8">
+                                Presenting the third edition of the Classroom Series. Over the past few years, I have been sharing audio recordings from my classroom on my YouTube channel. In response to this initiative, a few people have asked for specific compositions. Some of these are complex and large compositions that require a lot more time and effort to learn.
+                            </p>
+<p class="font-body text-body-md text-on-surface-variant leading-relaxed mb-12">
+                                Hence, every few months I have been conducting a LIVE classroom session where 1-2 such magnus-opus compositions are taught by me. This is the first session for 2026, please find the details below:
+                            </p>
+<div class="swaralaya-separator">
+<div class="swaralaya-line"></div>
+<div class="swaralaya-dot"></div>
+<div class="swaralaya-line"></div>
+</div>
+<div class="space-y-12">
+<div>
+<h2 class="font-display text-3xl text-primary mb-6">Session #3 Details</h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">library_music</span>
+<div>
+<p class="font-label font-bold text-on-surface uppercase tracking-wide">Compositions to be Taught</p>
+<ul class="list-disc list-inside mt-2 text-on-surface-variant space-y-1">
+<li>devi ni pada sarasamule dikku - kambhoji - adi - shyama shastri</li>
+<li>devi sri tulasamma - mayamalavagowla - adi - tyagaraja</li>
+</ul>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<p class="font-label font-bold text-on-surface uppercase tracking-wide">Venue &amp; Format</p>
+<p class="text-on-surface-variant mt-1">Chennai-based participants can attend in-person. Limited seating available. Online via Zoom for global participants.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-warm-cream p-8 rounded-xl border border-outline-variant/30">
+<h3 class="font-display text-2xl text-tertiary mb-4">Eligibility</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                                                Age: 13+ years
+                                            </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary scale-75">check_circle</span>
+                                                Must have learnt at least 20 Kirtanas
+                                            </li>
+</ul>
+</div>
+<div class="bg-secondary-container/30 p-8 rounded-xl border border-misty-sky">
+<h3 class="font-display text-2xl text-secondary mb-4">Session Fee</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-display font-bold text-on-secondary-container">2000</span>
+<span class="text-xl font-label text-secondary">INR</span>
+</div>
+<p class="text-sm text-secondary mt-2">Per participant inclusive of materials</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-primary">
+<h3 class="font-label font-bold text-on-surface uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">info</span> Please Note
+                                    </h3>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li class="flex gap-3"><span class="text-primary">•</span> During registration, you will be required to log in to your email account to complete the process.</li>
+<li class="flex gap-3"><span class="text-primary">•</span> Please note that payments made towards confirmed registrations are non-refundable.</li>
+<li class="flex gap-3"><span class="text-primary">•</span> If you would like to avail financial assistance for this session, please indicate the same in the registration form.</li>
+<li class="flex gap-3"><span class="text-primary">•</span> For any further queries, please contact tmkrishnaofficial@gmail.com or +91 95001 33814.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar / Action Card -->
+<div class="lg:col-span-4">
+<div class="sticky top-32 space-y-8">
+<div class="bg-white p-8 rounded-xl shadow-[0_32px_64px_-12px_rgba(100,84,78,0.08)] border border-outline-variant/20">
+<div class="text-center mb-8">
+<p class="text-primary font-label text-sm font-bold uppercase tracking-widest mb-2">Registration Open</p>
+<h4 class="font-display text-2xl text-on-surface">Secure Your Seat</h4>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label font-bold text-lg hover:bg-rosewood hover:shadow-lg hover:-translate-y-1 transition-all duration-300 active:scale-95 mb-6">
+                                    Register Now
+                                </button>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Secure Payment Gateway</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-sm relative group" data-alt="A soft-focus lifestyle image of a traditional Indian classroom setting with clean white walls, warm natural sunlight streaming through a window, and a single wooden Tanpura resting against a cream-colored silk cushion. The aesthetic is serene and studious, embodying the 'Carnatic Serenity' style with a palette of ivory, gold, and earthy browns.">
+<img alt="Musical Ambience" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACPMrH4j25S4zPNvbeakp99STswK8JiAGtGBAXei2Zq4ge8YlOK7tJqGhfSY4FxqD292K_wdm36HA8L6hWeVkoANUSX9-Uza3j6URhH1iRklzwNg7pjCFZkX_Bhc1oHSoBAAe3K-zMJW9zpg6o-M1lE9rwBxe6z2KKsno57B1SLg9UaNE51tPhIx3oylGSCDEqGEgqW-06uKMa2jWXPH7XFSdxeaXb987FzhVUa_a3Jaz7mrYnKDCxG3MLGjlWA9IQKX1fHKDucAZr">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<p class="text-white font-display italic text-lg leading-snug">"Learning is an intimate journey of the soul through sound."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gradient-to-b from-surface-container to-primary-container dark:from-surface-container-highest dark:to-primary-container w-full rounded-t-[40px] mt-section-gap border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-on-secondary-fixed-variant mb-6 font-bold">
+                    Mata Sangeeta Vidyalaya
+                </div>
+<p class="text-body-md text-on-secondary-fixed-variant/80 font-body mb-8">
+                    Nurturing the soul through the timeless traditions of Carnatic music.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-on-primary-fixed-variant/10 flex items-center justify-center text-on-primary-fixed-variant hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-on-primary-fixed-variant/10 flex items-center justify-center text-on-primary-fixed-variant hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="font-label text-sm font-bold uppercase tracking-widest text-on-secondary-fixed-variant">Quick Links</h5>
+<nav class="flex flex-col gap-3">
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">About Us</a>
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">Workshops</a>
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">Gallery</a>
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">Blog</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h5 class="font-label text-sm font-bold uppercase tracking-widest text-on-secondary-fixed-variant">Legal &amp; Support</h5>
+<nav class="flex flex-col gap-3">
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">Terms of Service</a>
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">Privacy Policy</a>
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">Contact Support</a>
+<a class="text-on-secondary-fixed-variant/80 hover:text-primary hover:translate-x-1 transition-all duration-300" href="#">FAQs</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h5 class="font-label text-sm font-bold uppercase tracking-widest text-on-secondary-fixed-variant">Newsletter</h5>
+<p class="text-sm text-on-secondary-fixed-variant/80 mb-4">Stay updated with our musical journey.</p>
+<div class="relative">
+<input class="w-full bg-white/50 border border-outline-variant/30 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-all" placeholder="Email Address" type="email">
+<button class="absolute right-1 top-1 bg-primary text-on-primary p-2 rounded-full hover:scale-105 transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-margin-desktop text-center">
+<p class="font-caption text-caption text-on-secondary-fixed-variant/60">
+                © 2024 Mata Sangeeta Vidyalaya. All rights reserved. Designed for Carnatic Serenity.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the Register button
+        document.querySelector('.bg-primary').addEventListener('click', function(e) {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1.05)';
+            }, 100);
+        });
+
+        // Simple scroll reveal for content
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.space-y-12 > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

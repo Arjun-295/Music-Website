@@ -1,0 +1,477 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Create New Competition | Carnatic Serenity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#b9c9d3",
+                        "outline": "#807477",
+                        "tertiary-fixed-dim": "#e3c290",
+                        "tertiary": "#735a31",
+                        "surface-container-high": "#eae8e5",
+                        "secondary-container": "#d5e5f0",
+                        "outline-variant": "#d2c3c6",
+                        "surface-tint": "#745660",
+                        "on-surface": "#1b1c1a",
+                        "tertiary-container": "#efcd9a",
+                        "on-primary-fixed-variant": "#5b3f48",
+                        "tertiary-fixed": "#ffdeac",
+                        "on-secondary-container": "#576670",
+                        "background": "#fbf9f6",
+                        "primary-fixed": "#ffd9e3",
+                        "inverse-surface": "#30312f",
+                        "on-tertiary-fixed": "#281900",
+                        "inverse-primary": "#e3bdc7",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#0e1d25",
+                        "secondary-fixed": "#d5e5f0",
+                        "on-secondary-fixed-variant": "#3a4952",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#51606a",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dbdad7",
+                        "surface": "#fbf9f6",
+                        "surface-container": "#efeeeb",
+                        "on-surface-variant": "#4f4447",
+                        "on-tertiary-fixed-variant": "#59431c",
+                        "inverse-on-surface": "#f2f0ed",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary-fixed": "#2b151d",
+                        "surface-variant": "#e4e2df",
+                        "primary": "#745660",
+                        "surface-container-highest": "#e4e2df",
+                        "on-primary-container": "#70525b",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e3bdc7",
+                        "on-tertiary-container": "#6e562d",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#1b1c1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f5f3f0",
+                        "on-error": "#ffffff",
+                        "primary-container": "#efc8d3"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Playfair Display"],
+                        "display": ["Playfair Display"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .swaralaya-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px 0;
+        }
+        .swaralaya-line {
+            height: 1px;
+            background: #d2c3c6;
+            flex-grow: 1;
+        }
+        .swaralaya-dot {
+            width: 6px;
+            height: 6px;
+            background: #745660;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- Sidebar Navigation (Identity Lock) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant shadow-sm flex flex-col p-4 z-50">
+<div class="mb-10 px-2">
+<h1 class="font-display text-headline-sm font-semibold text-primary">Carnatic Serenity</h1>
+<p class="text-label-sm text-on-surface-variant opacity-70">Admin Dashboard</p>
+</div>
+<nav class="space-y-2 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-xl font-semibold transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+<span class="font-body text-label-md">Competitions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">theater_comedy</span>
+<span class="font-body text-label-md">Workshops</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-body text-label-md">Students</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body text-label-md">Logout</span>
+</a></nav>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold">JD</div>
+<div class="overflow-hidden">
+<p class="text-label-md font-semibold truncate">Jaydeep Deshmukh</p>
+<p class="text-label-sm text-outline truncate">Chief Administrator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Top App Bar -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-surface/60 backdrop-blur-md border-b border-outline-variant flex justify-between items-center px-8 z-40">
+<h2 class="font-display text-headline-sm font-bold text-primary">Create New Competition</h2>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<input class="bg-surface-container-low border-none rounded-full px-5 py-2 text-label-md w-64 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search competitions..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-2 text-outline">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">help_outline</span></button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-32 px-12 max-w-6xl mx-auto">
+<!-- Intro Header -->
+<div class="mb-12 text-center">
+<h1 class="font-display text-5xl font-bold text-on-surface mb-4">Craft an Experience</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">Add competition details and choose how it will appear to participants. Your choices today define the stage for tomorrow's maestros.</p>
+</div>
+<div class="space-y-16">
+<!-- Section 1: Basic Information -->
+<section class="bg-surface-container-lowest rounded-xl p-10 shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">info</span>
+<h3 class="font-display text-2xl font-semibold">Basic Information</h3>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="col-span-2 md:col-span-1">
+<label class="block text-label-md font-semibold text-outline mb-2">Competition Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="e.g., Margazhi Mahotsav 2024" type="text">
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-label-md font-semibold text-outline mb-2">Competition Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all">
+<option>Singing (Vocal)</option>
+<option>Instrumental (Veena, Violin, Flute)</option>
+<option>Percussion (Mridangam, Ghatam)</option>
+<option>Group Band / Ensemble</option>
+</select>
+</div>
+<div class="col-span-2">
+<label class="block text-label-md font-semibold text-outline mb-2">Short Description</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="A brief overview of the competition objectives and criteria..." rows="3"></textarea>
+</div>
+<div class="col-span-2">
+<label class="block text-label-md font-semibold text-outline mb-4">Banner Image</label>
+<div class="relative group cursor-pointer border-2 border-dashed border-outline-variant rounded-xl p-12 text-center hover:bg-primary-container/5 transition-all">
+<span class="material-symbols-outlined text-4xl text-outline mb-2">add_photo_alternate</span>
+<p class="text-label-md text-on-surface-variant">Click to upload or drag and drop</p>
+<p class="text-label-sm text-outline mt-1">Recommended size: 1200 x 400px (JPG, PNG)</p>
+</div>
+</div>
+</div>
+</section>
+<div class="swaralaya-separator">
+<div class="swaralaya-line"></div>
+<div class="swaralaya-dot"></div>
+<div class="swaralaya-dot"></div>
+<div class="swaralaya-dot"></div>
+<div class="swaralaya-line"></div>
+</div>
+<!-- Section 2: Schedule & Location -->
+<section class="bg-surface-container-lowest rounded-xl p-10 shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<h3 class="font-display text-2xl font-semibold">Schedule &amp; Location</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Event Date</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" type="date">
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Start Time</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" type="time">
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">End Time</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" type="time">
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Registration Deadline</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" type="date">
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Venue Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all">
+<option>Online</option>
+<option>Offline (On-premise)</option>
+<option>Hybrid</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Venue/Meeting Link</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Location address or Zoom link" type="text">
+</div>
+</div>
+</section>
+<!-- Section 3: Participation Details -->
+<section class="bg-surface-container-lowest rounded-xl p-10 shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">diversity_3</span>
+<h3 class="font-display text-2xl font-semibold">Participation Details</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Participation Mode</label>
+<div class="flex gap-4">
+<label class="flex-1 flex items-center justify-center p-4 rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent transition-all has-[:checked]:border-primary has-[:checked]:bg-primary-container/20">
+<input checked="" class="hidden" name="mode" type="radio">
+<span class="text-label-md font-medium">Solo</span>
+</label>
+<label class="flex-1 flex items-center justify-center p-4 rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent transition-all has-[:checked]:border-primary has-[:checked]:bg-primary-container/20">
+<input class="hidden" name="mode" type="radio">
+<span class="text-label-md font-medium">Group</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Age Group</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all">
+<option>Under 10</option>
+<option>10 - 15</option>
+<option>15 - 18</option>
+<option>Open Category</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Registration Fee</label>
+<div class="relative">
+<span class="absolute left-4 top-4 font-semibold text-outline">₹</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 pl-10 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="500" type="number">
+</div>
+</div>
+<div>
+<label class="block text-label-md font-semibold text-outline mb-2">Max Participants</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="No limit" type="number">
+</div>
+<div class="col-span-2">
+<label class="block text-label-md font-semibold text-outline mb-2">Prize Details</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="e.g., 1st Prize: ₹5000 + Trophy, 2nd Prize: ₹3000..." rows="2"></textarea>
+</div>
+</div>
+</section>
+<!-- Section 4: Registration Form Fields -->
+<section class="bg-surface-container-lowest rounded-xl p-10 shadow-sm border border-outline-variant/20">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">list_alt</span>
+<h3 class="font-display text-2xl font-semibold">Registration Form Fields</h3>
+</div>
+<button class="flex items-center gap-2 text-primary font-semibold hover:underline">
+<span class="material-symbols-outlined text-lg">add</span>
+                        Add Custom Field
+                    </button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Full Name</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Email</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Phone</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Age</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">City</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Music Category</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Experience</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Performance Title</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Video Upload</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container rounded-lg cursor-pointer">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+<span class="text-label-md">Additional Notes</span>
+</label>
+</div>
+</section>
+<!-- Section 5: Display Template Selection -->
+<section class="bg-surface-container-lowest rounded-xl p-10 shadow-sm border border-outline-variant/20 mb-12">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">palette</span>
+<h3 class="font-display text-2xl font-semibold">Display Template Selection</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Template 1 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3 border-2 border-transparent transition-all group-has-[:checked]:border-primary shadow-sm">
+<div class="w-full h-full bg-white p-4">
+<div class="w-full h-12 bg-primary-container rounded mb-2"></div>
+<div class="w-3/4 h-2 bg-surface-container rounded mb-1"></div>
+<div class="w-1/2 h-2 bg-surface-container rounded mb-4"></div>
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square bg-surface-container rounded"></div>
+<div class="aspect-square bg-surface-container rounded"></div>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-label-sm">Preview</button>
+</div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary border-outline-variant" name="template" type="radio">
+<span class="text-label-md font-semibold">Classic</span>
+</label>
+<p class="text-label-sm text-outline mt-1">Standard layout with large banner.</p>
+</div>
+<!-- Template 2 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3 border-2 border-transparent transition-all group-has-[:checked]:border-primary shadow-sm">
+<div class="w-full h-full bg-white relative">
+<div class="absolute inset-0 bg-primary-container/30"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="w-full h-4 bg-white rounded mb-2 shadow-sm"></div>
+<div class="w-2/3 h-2 bg-white rounded shadow-sm"></div>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-label-sm">Preview</button>
+</div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary border-outline-variant" name="template" type="radio">
+<span class="text-label-md font-semibold">Modern</span>
+</label>
+<p class="text-label-sm text-outline mt-1">Immersive hero and clean blocks.</p>
+</div>
+<!-- Template 3 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3 border-2 border-transparent transition-all group-has-[:checked]:border-primary shadow-sm">
+<div class="w-full h-full bg-white p-6 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary mb-4"></div>
+<div class="w-16 h-2 bg-surface-container rounded mb-1"></div>
+<div class="w-12 h-2 bg-surface-container rounded mb-6"></div>
+<div class="w-full h-24 bg-surface-container-low rounded"></div>
+</div>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-label-sm">Preview</button>
+</div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary border-outline-variant" name="template" type="radio">
+<span class="text-label-md font-semibold">Minimal</span>
+</label>
+<p class="text-label-sm text-outline mt-1">Clean, single-column focused design.</p>
+</div>
+<!-- Template 4 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low mb-3 border-2 border-transparent transition-all group-has-[:checked]:border-primary shadow-sm">
+<div class="w-full h-full bg-primary-container p-4 flex flex-col justify-end">
+<div class="w-full aspect-[3/4] bg-white rounded-lg mb-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">photo</span>
+</div>
+<div class="w-full h-4 bg-primary rounded"></div>
+</div>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-white text-primary px-4 py-2 rounded-lg font-semibold text-label-sm">Preview</button>
+</div>
+</div>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary border-outline-variant" name="template" type="radio">
+<span class="text-label-md font-semibold">Event Poster</span>
+</label>
+<p class="text-label-sm text-outline mt-1">Bold typography and poster style.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Action Bar (Sticky) -->
+<footer class="fixed bottom-0 left-64 right-0 bg-white/80 glass-header border-t border-outline-variant/30 h-20 flex items-center justify-between px-12 z-50">
+<div>
+<span class="text-label-sm text-outline uppercase tracking-widest font-semibold">Autosaved at 14:20 PM</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="px-6 py-2 rounded-xl border border-primary text-primary font-semibold hover:bg-primary/5 transition-all">
+                Save as Draft
+            </button>
+<button class="flex items-center gap-2 text-on-surface-variant font-semibold hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                Preview
+            </button>
+<button class="px-8 py-3 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all">
+                Publish Competition
+            </button>
+</div>
+</footer>
+<!-- Absolute Footer Information -->
+<div class="ml-64 bg-transparent h-12 flex justify-between items-center px-8 w-full border-t border-outline-variant/30">
+<span class="text-outline text-label-sm">© 2024 Carnatic Serenity Music Academy</span>
+<div class="flex gap-6">
+<a class="text-outline text-label-sm hover:text-tertiary transition-colors" href="#">Support</a>
+<a class="text-outline text-label-sm hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="text-outline text-label-sm hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<script>
+        // Simple Interaction Logic
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.classList.add('ring-2', 'ring-primary/10');
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.classList.remove('ring-2', 'ring-primary/10');
+            });
+        });
+    </script>
+
+
+</body></html>
