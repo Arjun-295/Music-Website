@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const carouselRef = useRef(null);
@@ -61,7 +62,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
 
-          <div className="relative z-10 px-margin-desktop space-y-8 flex flex-col items-center">
+          <div className="relative z-10 px-4 sm:px-6 md:px-margin-desktop space-y-8 flex flex-col items-center">
             <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-white leading-tight">
               Where Tradition <br />
               Meets Melody
@@ -72,11 +73,25 @@ const Home = () => {
               nurturing the next generation of classical artists with modern
               pedagogical grace.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <button className="bg-primary text-on-primary px-10 py-5 rounded-full hover:bg-tertiary transition-colors duration-300 font-label-md text-label-md shadow-lg shadow-primary/20">
-                Explore Programs
-              </button>
-              <button className="border-2 border-white text-white px-10 py-5 rounded-full hover:bg-white/10 transition-colors duration-300 font-label-md text-label-md">
+            <div className="flex flex-wrap gap-4 justify-center items-center pt-2">
+              <Link
+                to="/workshops"
+                className="cursor-pointer bg-[#8E3B2F] hover:bg-[#A34335] text-white px-8 py-4 sm:px-10 sm:py-4.5 rounded-full shadow-[0_12px_24px_-4px_rgba(0,0,0,0.4)] hover:shadow-[0_16px_32px_-4px_rgba(142,59,47,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 font-label-md text-label-md tracking-wider flex items-center gap-2 group font-semibold"
+              >
+                <span>Explore Programs</span>
+                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform duration-300">
+                  arrow_forward
+                </span>
+              </Link>
+              <button
+                onClick={() => {
+                  const footer = document.getElementById("footer") || document.querySelector("footer");
+                  if (footer) {
+                    footer.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="cursor-pointer backdrop-blur-md bg-white/15 hover:bg-white/25 border-2 border-white/70 hover:border-white text-white px-8 py-4 sm:px-10 sm:py-4.5 rounded-full shadow-[0_12px_24px_-4px_rgba(0,0,0,0.3)] hover:shadow-[0_16px_32px_-4px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 font-label-md text-label-md tracking-wider font-semibold"
+              >
                 Contact Us
               </button>
             </div>

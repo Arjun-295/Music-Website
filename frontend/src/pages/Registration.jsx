@@ -1,13 +1,17 @@
 import { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { getWorkshopById } from '../data/workshopsData';
 
 const Registration = () => {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const workshopParam = searchParams.get('workshop');
+  const selectedWorkshop = workshopParam ? getWorkshopById(workshopParam) : null;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/checkout');
+    navigate(selectedWorkshop ? `/checkout?workshop=${selectedWorkshop.id}` : '/checkout');
   };
 
   const handleUploadClick = () => {
@@ -26,27 +30,38 @@ const Registration = () => {
           
           {/* Event Summary Card */}
           <div className="bg-secondary-container/20 border border-outline-variant/30 rounded-2xl p-6 mb-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-56 h-40 rounded-xl overflow-hidden shadow-sm">
-              <img className="w-full h-full object-cover" data-alt="A close-up of a traditional Indian Veena instrument, beautifully crafted and resting on a silk cloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlIKm0pYCo-NK91fPhJReDZjwsEj7_JYqjWk1QuSzUX8ltLv2xyJJWRdV9ZyDvNbDjJPO_BLHXCvPwQCKQ2sAkbdkmkraLMA6mctv5w50OzvP87Gu0tMjM3Db5QPBll00pzZkXHtn5KKmyZCc9KDMgkurb2L8z2t7uwpYIYOLf1KnT9Ud-h_kUcAMjqFe_alzJGqJDfUZerCcEqqUgzoPHWjxMyYo28PllpTb1uY4VXrvwE3GnBJPQo6XUtNC4BF9413D_Oov7AhGz" />
+            <div className="w-full md:w-56 h-40 rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+              <img 
+                className="w-full h-full object-cover" 
+                alt={selectedWorkshop ? selectedWorkshop.title : "Workshop Banner"} 
+                src={selectedWorkshop ? selectedWorkshop.image : "https://lh3.googleusercontent.com/aida-public/AB6AXuAlIKm0pYCo-NK91fPhJReDZjwsEj7_JYqjWk1QuSzUX8ltLv2xyJJWRdV9ZyDvNbDjJPO_BLHXCvPwQCKQ2sAkbdkmkraLMA6mctv5w50OzvP87Gu0tMjM3Db5QPBll00pzZkXHtn5KKmyZCc9KDMgkurb2L8z2t7uwpYIYOLf1KnT9Ud-h_kUcAMjqFe_alzJGqJDfUZerCcEqqUgzoPHWjxMyYo28PllpTb1uY4VXrvwE3GnBJPQo6XUtNC4BF9413D_Oov7AhGz"} 
+              />
             </div>
             <div className="flex-1">
-              <h3 className="font-headline text-3xl text-cocoa-brown mb-4">Summer Music Workshop</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-on-surface-variant text-sm">
+              <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">
+                {selectedWorkshop ? `${selectedWorkshop.category} • ${selectedWorkshop.mode}` : 'Vocal / Instrumental Training'}
+              </span>
+              <h3 className="font-headline text-2xl sm:text-3xl text-cocoa-brown mb-3">
+                {selectedWorkshop ? selectedWorkshop.title : 'Summer Music Workshop'}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5 gap-x-6 text-on-surface-variant text-sm">
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-xl">calendar_month</span>
-                  <span>20 July 2026</span>
+                  <span>{selectedWorkshop ? selectedWorkshop.dates : '20 July 2026'}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-xl">schedule</span>
-                  <span>10:00 AM – 4:00 PM</span>
+                  <span>{selectedWorkshop ? selectedWorkshop.time : '10:00 AM – 4:00 PM'}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-xl">location_on</span>
-                  <span>Hyderabad</span>
+                  <span>{selectedWorkshop ? selectedWorkshop.mode : 'Hyderabad'}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-xl">payments</span>
-                  <span className="font-semibold text-cocoa-brown">2000 INR</span>
+                  <span className="font-semibold text-cocoa-brown">
+                    {selectedWorkshop ? `${selectedWorkshop.fee} ${selectedWorkshop.currency}` : '2000 INR'}
+                  </span>
                 </div>
               </div>
             </div>

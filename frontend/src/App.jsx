@@ -15,6 +15,7 @@ import AdminCompetition from './pages/AdminCompetition';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function AppContent() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function AppContent() {
 
   return (
     <>
+      <ScrollToTop />
       {!isAdmin && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,6 +34,7 @@ function AppContent() {
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/competition-details" element={<CompetitionDetails />} />
         <Route path="/workshop-details" element={<WorkshopDetails />} />
+        <Route path="/workshop-details/:id" element={<WorkshopDetails />} />
         <Route path="/checkout" element={<SecureCheckout />} />
         <Route path="/swaralaya-competitions" element={<SwaralayaCompetitions />} />
         <Route path="/gallery" element={<Gallery />} />

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-surface-container to-primary-container dark:from-surface-container-highest dark:to-primary-container w-full rounded-t-[40px] mt-section-gap border-t border-outline-variant/30">
+    <footer id="footer" className="bg-gradient-to-b from-surface-container to-primary-container dark:from-surface-container-highest dark:to-primary-container w-full rounded-t-[40px] mt-section-gap border-t border-outline-variant/30">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop py-16 max-w-container-max mx-auto">
         <div className="col-span-1 md:col-span-1">
           <div className="font-headline-md text-headline-md text-on-secondary-fixed-variant mb-6 font-bold">
