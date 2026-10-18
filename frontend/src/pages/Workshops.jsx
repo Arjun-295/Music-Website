@@ -143,7 +143,7 @@ const Workshops = () => {
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
                 <Link 
-                  to={`/register?workshop=${featuredWorkshop.id}`}
+                  to={`/event-register?workshop=${featuredWorkshop.id}`}
                   className="cursor-pointer px-7 py-3.5 bg-surface-container hover:bg-surface-container-high text-primary border border-primary/30 rounded-xl font-label text-sm font-semibold hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
                 >
                   Register Now
@@ -329,7 +329,7 @@ const Workshops = () => {
                           <span className="material-symbols-outlined text-xs group-hover/btn:translate-x-0.5 transition-transform">arrow_forward</span>
                         </Link>
                         <Link 
-                          to={`/register?workshop=${workshop.id}`}
+                          to={`/event-register?workshop=${workshop.id}`}
                           className="cursor-pointer w-full py-2.5 px-3 text-center rounded-xl bg-primary hover:bg-[#6c483d] text-on-primary font-label text-xs font-semibold transition-all duration-200 shadow-sm hover:shadow"
                         >
                           Register

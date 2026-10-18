@@ -348,7 +348,7 @@ const WorkshopDetails = () => {
 
                     {/* Register Now CTA Button */}
                     <Link 
-                      to={`/register?workshop=${workshop.id}`} 
+                      to={`/event-register?workshop=${workshop.id}`} 
                       className="cursor-pointer w-full bg-[#8E3B2F] hover:bg-[#A34335] text-white py-4 rounded-xl font-label font-bold text-base hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 block text-center shadow-md mb-4"
                     >
                       Register for Workshop

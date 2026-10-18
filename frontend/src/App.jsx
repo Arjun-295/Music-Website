@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Competitions from './pages/Competitions';
 import Registration from './pages/Registration';
 import RegistrationSuccess from './pages/RegistrationSuccess';
+import SignUp from './pages/SignUp';
 import Workshops from './pages/Workshops';
 import CompetitionDetails from './pages/CompetitionDetails';
 import WorkshopDetails from './pages/WorkshopDetails';
@@ -20,6 +21,7 @@ import ScrollToTop from './components/ScrollToTop';
 function AppContent() {
   const location = useLocation();
   const isAdmin = location.pathname.startsWith('/admin');
+  const isAuthPage = ['/login', '/signup', '/register'].includes(location.pathname);
 
   return (
     <>
@@ -28,8 +30,11 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="/event-register" element={<Registration />} />
+        <Route path="/workshop-register" element={<Registration />} />
         <Route path="/competitions" element={<Competitions />} />
-        <Route path="/register" element={<Registration />} />
         <Route path="/registration-success" element={<RegistrationSuccess />} />
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/competition-details" element={<CompetitionDetails />} />
@@ -42,7 +47,7 @@ function AppContent() {
         <Route path="/admin" element={<AdminCompetition />} />
         <Route path="/admin/create-competition" element={<AdminCompetition />} />
       </Routes>
-      {!isAdmin && <Footer />}
+      {!isAdmin && !isAuthPage && <Footer />}
     </>
   );
 }

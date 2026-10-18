@@ -15,22 +15,22 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+    <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen lg:h-screen lg:overflow-hidden flex flex-col justify-between">
       {/* TopAppBar */}
       
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center pt-24 pb-12 relative overflow-hidden">
+      <main className="flex-grow flex items-center justify-center pt-20 pb-4 relative overflow-hidden px-4">
         <div className="absolute inset-0 z-0 pointer-events-none opacity-10 flex justify-center items-center">
           <img className="w-full h-full object-cover veena-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpbwHEpGS-j0gdYAswmYlTfXbS4upSVcBvw7DIP1RH0iXGhp6PXdyQsTaiNM2LVrdfopCwzaozpmZirDeMw7ix7qsht2lptwvm-li0SrK6DHNEQp8jX9XdM47eBCSvjDn0a3W-aEUKnnfK1oKCB1DOf7ZtA7VJT9H2A2-EY9Q0Hvpds8jiScS85Kk94ckufw80urvbvHfqxsIg32NVmuaAZfCnWEt8pxSZ1hk7-WYBp2wjEAKCb-IYD1IJ5WmbH_ufhN7WrRYa7H0Q" />
         </div>
         
-        <div className="container max-w-md px-6 relative z-10">
-          <div className="text-center mb-10">
-            <h1 className="font-display-lg text-3xl md:text-4xl text-on-surface mb-2">Mata Sangeetha Vidhyalaya</h1>
-            <p className="text-on-surface-variant font-body-md">Harmony in Learning, Grace in Performance.</p>
+        <div className="container max-w-md px-4 sm:px-6 relative z-10 my-auto">
+          <div className="text-center mb-6">
+            <h1 className="font-display-lg text-2xl sm:text-3xl md:text-4xl text-on-surface mb-1">Mata Sangeetha Vidhyalaya</h1>
+            <p className="text-on-surface-variant font-body-md text-xs sm:text-sm">Harmony in Learning, Grace in Performance.</p>
           </div>
 
-          <div className="glass-card bg-surface-container-lowest rounded-xl p-8 shadow-[0_30px_60px_-15px_rgba(116,86,96,0.08)]">
+          <div className="glass-card bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-[0_30px_60px_-15px_rgba(116,86,96,0.08)] border border-outline-variant/30">
             <div className="flex p-1 bg-surface-container rounded-full mb-8 relative">
               <button 
                 className={`flex-1 py-2 text-label-md font-semibold rounded-full transition-all duration-300 z-10 ${activeTab === 'student' ? 'text-on-primary-container bg-primary-container shadow-sm' : 'text-on-surface-variant bg-transparent'}`}
@@ -90,12 +90,20 @@ const Login = () => {
               </form>
             </div>
 
-            <div className="mt-10 swaralaya-separator opacity-40">
+            <div className="mt-8 swaralaya-separator opacity-40">
               <div className="swaralaya-line"></div>
               <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
               <div className="swaralaya-line"></div>
             </div>
-            <p className="mt-8 text-center text-label-sm text-on-surface-variant">
+            
+            <p className="mt-6 text-center text-label-sm text-on-surface-variant">
+              New to the Vidyalaya?{' '}
+              <Link to="/signup" className="text-primary font-bold hover:underline">
+                Create Student Account / Join Now
+              </Link>
+            </p>
+
+            <p className="mt-3 text-center text-label-sm text-on-surface-variant opacity-80">
               Need assistance? <a className="text-primary font-bold hover:underline" href="#">Contact Office</a>
             </p>
           </div>

@@ -92,7 +92,7 @@ const SwaralayaCompetitions = () => {
               </div>
               
               <div className="flex flex-wrap gap-4">
-                <Link to="/register" className="px-8 py-4 bg-primary text-on-primary rounded-[20px] font-label text-sm hover:shadow-lg transition-all duration-300 inline-block">Enroll Now</Link>
+                <Link to="/event-register" className="px-8 py-4 bg-primary text-on-primary rounded-[20px] font-label text-sm hover:shadow-lg transition-all duration-300 inline-block">Enroll Now</Link>
                 <Link to="/competition-details" className="px-8 py-4 border border-outline text-primary rounded-[20px] font-label text-sm hover:bg-surface-container-low transition-all duration-300 inline-block">Learn More</Link>
               </div>
             </div>
