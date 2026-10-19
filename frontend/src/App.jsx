@@ -21,7 +21,6 @@ import ScrollToTop from './components/ScrollToTop';
 function AppContent() {
   const location = useLocation();
   const isAdmin = location.pathname.startsWith('/admin');
-  const isAuthPage = ['/login', '/signup', '/register'].includes(location.pathname);
 
   return (
     <>
@@ -47,7 +46,7 @@ function AppContent() {
         <Route path="/admin" element={<AdminCompetition />} />
         <Route path="/admin/create-competition" element={<AdminCompetition />} />
       </Routes>
-      {!isAdmin && !isAuthPage && <Footer />}
+      {!isAdmin && <Footer />}
     </>
   );
 }

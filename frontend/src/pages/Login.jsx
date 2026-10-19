@@ -15,11 +15,11 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen lg:h-screen lg:overflow-hidden flex flex-col justify-between">
+    <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
       {/* TopAppBar */}
       
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center pt-20 pb-4 relative overflow-hidden px-4">
+      <main className="flex-grow flex items-center justify-center pt-24 pb-12 relative overflow-hidden px-4 min-h-[calc(100vh-80px)]">
         <div className="absolute inset-0 z-0 pointer-events-none opacity-10 flex justify-center items-center">
           <img className="w-full h-full object-cover veena-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpbwHEpGS-j0gdYAswmYlTfXbS4upSVcBvw7DIP1RH0iXGhp6PXdyQsTaiNM2LVrdfopCwzaozpmZirDeMw7ix7qsht2lptwvm-li0SrK6DHNEQp8jX9XdM47eBCSvjDn0a3W-aEUKnnfK1oKCB1DOf7ZtA7VJT9H2A2-EY9Q0Hvpds8jiScS85Kk94ckufw80urvbvHfqxsIg32NVmuaAZfCnWEt8pxSZ1hk7-WYBp2wjEAKCb-IYD1IJ5WmbH_ufhN7WrRYa7H0Q" />
         </div>

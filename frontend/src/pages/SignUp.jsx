@@ -54,7 +54,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen lg:h-screen lg:overflow-hidden flex flex-col justify-between">
+    <div className="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
       {/* Background Watermark */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-5 flex justify-center items-center">
         <img 
@@ -64,7 +64,7 @@ const SignUp = () => {
         />
       </div>
 
-      <main className="flex-grow flex items-center justify-center pt-20 pb-4 px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-7xl mx-auto">
+      <main className="flex-grow flex items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-7xl mx-auto min-h-[calc(100vh-80px)]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full my-auto">
           {/* Column 1: Heading, Value Proposition & Gurukula Heritage */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-5 text-left">
@@ -357,11 +357,6 @@ const SignUp = () => {
           </div>
         </div>
       </main>
-
-      {/* Compact aesthetic footer line */}
-      <footer className="py-2 text-center text-[11px] text-on-surface-variant/60 border-t border-outline-variant/20 relative z-10">
-        © 2026 Mata Sangeeta Vidyalaya. All rights reserved.
-      </footer>
     </div>
   );
 };
